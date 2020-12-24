@@ -1,5 +1,7 @@
 # cuts - C Unit Test Suite
 
+![CI](https://github.com/sorjente/cuts/workflows/CI/badge.svg)
+
 Cuts is a header-only minimal unit test suite to be used with C/C++ programs.
 
 Inspired by [minunit](http://www.jera.com/techinfo/jtns/jtn002.html) and Zed Shaw's test suite in Learn C The Hard Way.

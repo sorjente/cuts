@@ -28,8 +28,14 @@ jobs:
       - name: Install dependencies
         run: pip3 install macgrind
       - uses: actions/checkout@v2
+      - name: Install Docker
+        run: brew install docker docker-machine
+      - name: Start Docker Machine
+        run: brew services start docker-machine
+      - name: Docker Machine default
+        run: docker-machine create --driver virtualbox default
       - name: Make all
         run: make
       - name: Run tests
-        run: make tests
+        run: eval "$(docker-machine env default)" && make tests
 

@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+  ubuntu_build:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt-get install valgrind
+      - name: Make all
+        run: make
+      - name: Run tests
+        run: make tests
+
+
+  macos_build:
+      runs-on: macos-latest
+
+      steps:
+      - uses: actions/checkout@v2
+      - name: Make all
+        run: make
+      - name: Run tests
+        run: make tests
+

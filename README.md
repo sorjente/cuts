@@ -5,7 +5,7 @@ Cuts is a header-only minimal unit test suite to be used with C/C++ programs.
 Inspired by [minunit](http://www.jera.com/techinfo/jtns/jtn002.html) and Zed Shaw's test suite in Learn C The Hard Way.
 
 
-# How to use cuts
+## How to use cuts
 
 Cuts is trivial to install; just include the (very small) `cuts.h` file in your project (either directly or via the
 `-I` option).
@@ -87,4 +87,15 @@ including cuts:
 
 ...
 
+```
+
+## Developer notes
+
+If you want to develop and/or test cuts locally, you'll need to install [macgrind](https://pypi.org/project/macgrind/)
+if you're running macOS.
+
+Once that is done, tests can be run like this:
+
+```text
+$ make all tests
 ```

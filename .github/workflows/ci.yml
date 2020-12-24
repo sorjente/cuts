@@ -25,9 +25,9 @@ jobs:
       runs-on: macos-latest
 
       steps:
+      - uses: actions/checkout@v2
       - name: Install dependencies
         run: pip3 install macgrind
-      - uses: actions/checkout@v2
       - name: Install Docker
         run: brew install docker docker-machine
       - name: Start Docker Machine

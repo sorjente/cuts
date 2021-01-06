@@ -56,7 +56,7 @@ CUTS_RUN_SUITE(all_tests);
 If you `make` and run this test file, you'll get:
 
 ```text
-[CUTS] Running test suite from file `./build/other_test_file`
+[CUTS] Running test suite from file `./build/simple_test_file`
 ----------
 [CUTS] Running test `simple_test`
 [CUTS] Running test `array_equality`
@@ -69,7 +69,7 @@ Let's now say we introduce an error in the test file, for example by changing th
 from `5` to `6`. Now, our test (expectedly) fails like this:
 
 ```text
-[CUTS] Running test suite from file `./build/other_test_file`
+[CUTS] Running test suite from file `./build/simple_test_file`
 ----------
 [CUTS] Running test `simple_test`
 [CUTS] Running test `array_equality`

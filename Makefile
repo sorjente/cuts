@@ -15,6 +15,12 @@ all: build $(TEST_TARGETS)
 
 
 tests: $(TEST_TARGETS)
+	@for test in $(TEST_TARGETS) ; do \
+		./$$test ; \
+	done
+
+
+memchecks: $(TEST_TARGETS)
 ifeq ($(shell uname -s), Linux)
 	@for test in $(TEST_TARGETS) ; do \
 		valgrind --leak-check=full --error-exitcode=1 $$test ; \
@@ -24,6 +30,7 @@ else
 		macgrind . $$test --run-before "make clean" ; \
 	done
 endif
+
 
 
 $(BUILD_DIR)/%.o: $(TST_DIR)/%.c

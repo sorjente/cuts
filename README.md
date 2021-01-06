@@ -58,7 +58,7 @@ If you `make` and run this test file, you'll get:
 ```text
 [CUTS] Running test suite from file `./build/other_test_file`
 ----------
-[CUTS] Running test `some_more_math`
+[CUTS] Running test `simple_test`
 [CUTS] Running test `array_equality`
 ----------
 [CUTS] All tests passed!
@@ -71,7 +71,7 @@ from `5` to `6`. Now, our test (expectedly) fails like this:
 ```text
 [CUTS] Running test suite from file `./build/other_test_file`
 ----------
-[CUTS] Running test `some_more_math`
+[CUTS] Running test `simple_test`
 [CUTS] Running test `array_equality`
 FAIL tests/other_test_file.c:17
     array2[i] == array1[i] + 1: Element mismatch for index 3
